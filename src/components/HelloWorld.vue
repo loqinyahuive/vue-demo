@@ -2,14 +2,14 @@
   <layout-golden class="screen">
     <gl-col>
       <gl-component title="compA" :height="height">
-        <h1>CompA</h1>
+        <List />
       </gl-component>
       <gl-component title="compB" :height="height">
         <h1>CompB</h1>
       </gl-component>
       <gl-stack>
         <gl-component title="compC" :height="height">
-          <h1>CompC</h1>
+          <Alert />
         </gl-component>
       </gl-stack>
     </gl-col>
@@ -17,14 +17,19 @@
 </template>
 
 <script>
-
+import List from './list'
+import Alert from './alert'
 export default {
   name: 'HelloWorld',
   data () {
     return {
       msg: 'Welcome to Your Vue.js App',
-      height: 10
+      height: 30
     }
+  },
+  components: {
+    List,
+    Alert
   }
 }
 </script>

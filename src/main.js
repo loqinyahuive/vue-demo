@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'golden-layout/src/css/goldenlayout-dark-theme.css'
+import Vuetify from 'vuetify'
 import vgl from 'vue-golden-layout'
 Vue.use(vgl)
+Vue.use(Vuetify)
 Vue.config.productionTip = false
 const {layoutGolden, glComponent, glRow, glCol, glStack} = {
   install: function (Vue) {
